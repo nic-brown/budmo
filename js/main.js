@@ -634,22 +634,22 @@ $(document).ready(function () {
     start: "150px bottom", // запуск анімації, коли низ  екрану пройшов 100px до цілі
   });
 
-  $.fancybox.open({
-    src: "#thx-popup",
-    type: "inline",
+  // $.fancybox.open({
+  //   src: "#thx-popup",
+  //   type: "inline",
 
-    opts: {
-      backFocus: false,
-      autoFocus: false,
-      touch: false,
-      beforeShow: function (instance, current) {
-        $(".fancybox-custom-overlay").addClass("active");
-      },
-      beforeClose: function (instance, current) {
-        $(".fancybox-custom-overlay").removeClass("active");
-      },
-    },
-  });
+  //   opts: {
+  //     backFocus: false,
+  //     autoFocus: false,
+  //     touch: false,
+  //     beforeShow: function (instance, current) {
+  //       $(".fancybox-custom-overlay").addClass("active");
+  //     },
+  //     beforeClose: function (instance, current) {
+  //       $(".fancybox-custom-overlay").removeClass("active");
+  //     },
+  //   },
+  // });
 
   $(".reg-burger").click(function (e) {
     $(this).toggleClass("active");
