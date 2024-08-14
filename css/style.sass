@@ -1,0 +1,1594 @@
+// // базовые подключения
+// @import "vars"
+// @import "mixins"
+// @import "fonts"
+// @import "settings"
+
+// // подключения компонентов страницы
+// @import "./components/header"
+
+// тестовые стили, удалите их
+
+  // &:after
+  //   content: url(../img/header-location.svg)
+  //   position: absolute
+  //   left: 0
+  //   top: 2px 
+$primary-color: #2E3C5B
+$color-red: #F14350
+$color-light: #F4F8FD
+
+$font-med: 'HelveticaNeueCyr-Medium'
+$font-reg: 'HelveticaNeueCyr-Medium'
+$font-heavy: 'HelveticaNeueCyr-Heavy'
+
+$font-bona: "Bona Nova", serif
+$font-thin: 'HelveticaNeueCyr-Thin'
+
+$font-light: 'HelveticaNeueCyr-Light'
+$font-roman: 'HelveticaNeueCyr-Roman'
+$font-black: 'HelveticaNeueCyr-Black'
+$font-bold: 'HelveticaNeueCyr-Bold'
+
+$font-mont: 'Montserrat', sans-serif
+
+$font-kyiv-black: 'KyivTypeSans-Black'
+$font-kyiv-bold: 'KyivTypeSans-Bold'
+$font-kyiv-heavy: 'KyivTypeSans-Heavy'
+$font-kyiv-med: 'KyivTypeSans-Medium'
+$font-kyiv-reg: 'KyivTypeSans-Regular'
+
+@font-face
+  font-family: 'HelveticaNeueCyr-Light'
+  src: url('../fonts/HelveticaNeueCyr-Light.woff') format('woff')
+@font-face
+  font-family: 'HelveticaNeueCyr-Medium'
+  src: url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff')
+@font-face
+  font-family: 'HelveticaNeueCyr-Thin'
+  src: url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff')
+@font-face
+  font-family: 'HelveticaNeueCyr-Bold'
+  src: url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff')
+@font-face
+  font-family: 'HelveticaNeueCyr-Roman'
+  src: url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff')
+@font-face
+  font-family: 'HelveticaNeueCyr-Black'
+  src: url('../fonts/HelveticaNeueCyr-Black.woff') format('woff')
+@font-face
+  font-family: 'HelveticaNeueCyr-Heavy'
+  src: url('../fonts/HelveticaNeueCyr-Heavy.woff') format('woff')
+
+@font-face
+  font-family: 'KyivTypeSans-Black'
+  src: url('../fonts/KyivTypeSans-Black2.woff') format('woff')
+@font-face
+  font-family: 'KyivTypeSans-Bold'
+  src: url('../fonts/KyivTypeSans-Bold2.woff') format('woff')
+@font-face
+  font-family: 'KyivTypeSans-Heavy'
+  src: url('../fonts/KyivTypeSans-Heavy2.woff') format('woff')
+@font-face
+  font-family: 'KyivTypeSans-Medium'
+  src: url('../fonts/KyivTypeSans-Medium2.woff') format('woff')
+@font-face
+  font-family: 'KyivTypeSans-Regular'
+  src: url('../fonts/KyivTypeSans-Regular2.woff') format('woff')
+
+// @font-face
+//   font-family: 'KyivTypeSans-Black2'
+//   src: url('../fonts/KyivTypeSans-Black2.woff2') format('woff2'), url('../fonts/KyivTypeSans-Black2.woff') format('woff')
+//---------------------- BASIC STYLES 
+*
+  box-sizing: border-box
+section
+  // border-top: 1px dashed purple
+  // border-bottom: 1px dashed purple
+  overflow: hidden
+  // background: #fff
+  position: relative
+  z-index: 10
+
+body
+  font-size: 16px
+  color: $primary-color
+  background-color: #fff
+  font-family: $font-light
+  letter-spacing: normal
+  // overflow-x: hidden
+
+%background
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+%imgcover
+  height: 100%
+  display: block
+  width: 100%
+  object-fit: cover
+%imgcontain
+  height: 100%
+  display: block
+  width: 100%
+  object-fit: contain
+%imgmax
+  max-width: 100%
+  height: auto
+  max-height: 100%
+
+svg
+  z-index: 1
+.slick-arrow
+  &:before
+    display: none
+.absolute
+  position: absolute
+  pointer-events: none
+.fancy-call
+  display: none
+button:focus,input,a,.slick-slide:focus,.select2-selection,a:focus,.swiper-button-next,
+.swiper-button-prev,.swiper-pagination-bullet,textarea,video,.big-arrows
+  outline: none
+
+.slick-slider, .slick-dotted.slick-slider
+  margin-bottom: 0px
+.slick-slide
+  height: auto
+div.wpcf7 .ajax-loader
+  display: none
+// ul, li
+//   list-style: none
+// textarea
+//   resize: none
+//   overflow: hidden
+//   vertical-align: unset
+input,button,textarea
+  font-family: inherit
+  font-weight: 400
+a
+  text-decoration: none
+button
+  border: none
+h1,h2,h3,h4,h5,h6,div,p,span,ul,li,button
+  padding: 0px
+  margin: 0px
+@media (min-width: 1200px)
+  .container
+    max-width: 1200px
+  .row
+    margin-right: -30px
+    margin-left: -30px
+
+.sub-text-not-existing
+  font-family: $font-mont
+  font-size: 20px
+  line-height: 30px
+  strong
+    font-weight: 700
+  ol,ul
+    padding-left: 24px
+    margin: 10px 0
+  ul
+    li
+      list-style-type: disc
+  ol
+    li
+      list-style-type: decimal
+  a
+    text-decoration: underline
+    color: $primary-color
+    &:hover
+      text-decoration: none
+.btn-wrapper
+  text-align: center
+.serv-btn,.custom-btn-ico,.tab-nav-btn,.custom-btn,.app-btn,.custom-btn-ico-large,.free-next,.custom-btn-ico-right
+  border: none
+  display: inline-block
+  text-transform: uppercase
+  font-family: $font-bold
+  font-size: 15px
+  border-radius: 25px
+  background: radial-gradient(64.20% 93.34% at 50% 50%,rgb(255, 212, 101) 34.5%,rgb(241, 192, 66) 100%)
+  letter-spacing: 1px
+  padding: 18px 30px
+  box-shadow: 0 3px 0 #99743B
+  color: #1E2739
+  transition: .3s
+.custom-btn-ico,.custom-btn,.custom-btn-ico-large,.custom-btn-ico-right
+  border-radius: 20px
+  display: inline-flex
+  align-items: center
+  font-size: 15px
+  letter-spacing: 1.4px
+  padding: 32px 42px 28px 42px
+  img
+    margin-right: 16px
+.custom-btn-ico-large
+  padding: 36px 36px 32px 36px
+  img
+    margin-left: 22px
+.custom-btn-ico-right
+  border-radius: 25px
+  padding: 34px 26px 30px 36px
+  img
+    margin-left: 11px
+.free-next
+  font-size: 12px
+  padding: 26px 70px 26px 34px
+  border-radius: 20px
+  background: url(../img/free-next.svg) no-repeat right 36px center , radial-gradient(62.39% 93.34% at 50% 50%,rgb(255, 101, 113) 34.5%,rgb(241, 66, 80) 100%)
+.serv-btn,.custom-btn,.custom-btn-ico,.custom-btn-ico-large,.custom-btn-ico-right
+  &:hover
+    box-shadow: 0 3px 0 #99743B, 0px 4px 90px 0px rgba(253, 209, 95, 0.5),
+.text-center
+  text-align: center
+.loader
+  background: rgb(255, 255, 255)
+  position: fixed
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  z-index: 100000
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  transition: .5s
+  opacity: 1
+  &.hidden
+    opacity: 0
+    visibility: hidden
+.logo-circle
+  margin-top: 28px
+  display: flex
+  span
+    background: #9FAAB6
+
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    margin: 0 2px
+    transform: scale(1)
+.logo-circle-1
+  animation: scale-cirlce .5s ease-in-out
+.logo-circle-2
+  animation: scale-cirlce .5s ease-in-out
+  animation-delay: .3s
+.logo-circle-3
+  animation: scale-cirlce .5s ease-in-out
+  animation-delay: .6s
+.logo-circle-4
+  animation: scale-cirlce .5s ease-in-out
+  animation-delay: .9s
+.logo-circle-5
+  animation: scale-cirlce .5s ease-in-out
+  animation-delay: 1.2s
+
+@keyframes scale-cirlce
+  0%,100%
+    transform: scale(1)
+    background: #9FAAB6
+  50%
+    transform: scale(2)
+    background: #1B2033
+//---------------------- THE END OF BASIC STYLES 
+
+.main-title
+  text-transform: uppercase
+
+  font-size: 32px
+  font-weight: 400
+  color: #A5BDF4
+  letter-spacing: 2px
+  line-height: 38px
+  position: relative
+  font-family: $font-kyiv-bold
+  span
+    font-family: $font-kyiv-heavy
+    font-size: 40px
+    line-height: normal
+    text-shadow: none
+    background: linear-gradient(108.92deg, rgb(255, 255, 255),rgb(184, 229, 255))
+    background-clip: text
+    color: transparent
+    display: inline-block
+    padding-bottom: 18px
+.section-title
+  font-size: 40px
+  font-family: $font-kyiv-bold
+  color: #2E3C5B
+  strong
+    font-family: $font-kyiv-black
+.section-text
+  font-family: $font-mont
+  font-size: 16px
+  color: #767C84
+  line-height: 24px
+  letter-spacing: 0.8px
+.white-title
+  position: relative
+  line-height: 45px
+  letter-spacing: 2.5px
+  font-size: 24px
+  font-family: $font-bona
+  font-weight: 400
+  text-transform: uppercase
+  color: #D4E0F4
+  strong
+    letter-spacing: 3.4px
+    font-family: $font-bona
+    font-size: 34px
+    color: #fff
+.section-sub
+  font-size: 20px
+  font-family: $font-roman
+  letter-spacing: 2px
+  margin-top: 15px
+.section-sub-reg
+  text-transform: uppercase
+  font-family: $font-bold
+  letter-spacing: 1.8px
+  line-height: 26px
+//█░░█ █▀▀ █▀▀█ █▀▀▄ █▀▀ █▀▀█ 
+//█▀▀█ █▀▀ █▄▄█ █░░█ █▀▀ █▄▄▀ 
+//▀░░▀ ▀▀▀ ▀░░▀ ▀▀▀░ ▀▀▀ ▀░▀▀
+.main-header
+  position: relative
+  color: #fff
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center bottom
+  padding: 170px 0 320px
+  overflow: hidden
+  .main-title
+    max-width: 740px
+.header-inner
+  position: relative
+  z-index: 20
+
+.header-dec-1
+  bottom: -345px
+  left: -319px
+.header-dec-2
+  top: -65px
+  right: -184px
+.footer-dec-1
+  bottom: 75px
+  left: -349px
+.footer-dec-2
+  top: -135px
+  right: -214px
+.param-dec-1
+  top: -140px
+  left: -169px
+.param-dec-2
+  bottom: -85px
+  right: -24px
+#main-nav
+  position: absolute
+  width: 100%
+  left: 0
+  top: 0
+  z-index: 1000
+  transition: .2s
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07)
+  &.fixed
+    position: fixed
+    backdrop-filter: blur(20px)
+    background: rgba(30, 39, 57, 0.75)
+    animation: show 0.4s
+
+    // .burger-btn svg rect
+    //   fill: #fff !important
+    .reg-tel
+      color: #fff
+
+    .reg-burger
+      border-right-color: #5A5E6A
+      border-left-color: #5A5E6A
+    .nav-col
+      height: 80px
+@keyframes show
+  0%
+    transform: translateY(-100%)
+  100%
+    transform: translateY(0px)
+
+.nav-col
+  height: 120px
+  transition: .2s
+
+.menu-wrapper
+  opacity: 0
+  visibility: hidden
+  position: absolute
+  width: 300px
+  background: #fff
+  top: 100%
+  left: 0
+  border-radius: 0 0 20px 20px
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1)
+  display: flex
+  flex-wrap: wrap
+  padding: 32px 40px 32px 58px
+  transition: .3s
+  &.active
+    opacity: 1
+    visibility: visible
+
+.menu-overlay
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  backdrop-filter: blur(20px)
+  background: rgba(13, 30, 58, 0.35)
+  z-index: 999
+  opacity: 0
+  visibility: hidden
+  transition: .3s
+  &.active
+    opacity: 1
+    visibility: visible
+
+.main-menu
+  font-size: 15px
+  font-family: $font-mont
+  font-weight: 400
+  color: #1E2739
+  a
+    color: inherit
+    display: block
+    transition: .3s
+    position: relative
+    padding: 10px 0 10px 35px
+    &:after
+      content: ''
+      position: absolute
+      height: 10px
+      width: 10px
+      border-radius: 50%
+      border: 2px solid #1E2739
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      transition: background .3s
+    &:hover
+      font-weight: 700
+      &:after
+        background: #1E2739
+
+.reg-logo
+  display: flex
+  align-items: center
+  img
+    max-width: 160px
+    box-shadow: 0px 0px 100px 0px rgba(255, 255, 255, 0.5)
+    border-radius: 20px
+nav
+  .logo
+    flex-shrink: 0
+.logo-text
+  margin: 0 40px 0 24px
+  padding-left: 20px
+  position: relative
+  max-width: 190px
+  font-size: 11px
+  line-height: normal
+  font-family: $font-mont
+  font-weight: 300
+  color: #fff
+  letter-spacing: 0.5px
+.logo-text-img
+  height: 100%
+  width: 1px
+  left: 0
+  top: 0
+  position: absolute
+.nav-inner
+  display: flex
+  position: relative
+
+.reg-tel-box
+  flex-shrink: 0
+  text-align: right
+  padding-left: 35px
+  display: flex
+  margin-left: auto
+  align-items: flex-end
+  justify-content: center
+  flex-direction: column
+.reg-email-box
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  flex-direction: column
+
+.reg-tel
+  font-family: $font-black
+  font-size: 16px
+  letter-spacing: 1.5px
+  color: #fff
+.tel-hidden
+  display: none
+.reg-nav-text
+  letter-spacing: 1.3px
+  color: #C3C6CB
+  font-size: 12px
+  margin-bottom: 3px
+.reg-burger
+  transition: .3s
+  position: relative
+  flex-shrink: 0
+  width: 136px
+  border-right: 1px solid rgba(255, 255, 255, 0.07)
+  border-left: 1px solid rgba(255, 255, 255, 0.07)
+
+.burger-btn
+  border: none
+  background: transparent
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  transition: .2s
+
+  &:after
+    content: ''
+    background: url(../img/burger-close.svg)
+
+.reg-burger.active
+  background: #fff
+  border-left: none
+  svg
+    rect
+      fill: #1E2739
+  .burger-close
+    opacity: 1
+  .burger-open
+    opacity: 0
+.burger-close
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+  opacity: 0
+.burger-close,.burger-open
+  transition: .1s
+
+.discount-holder
+  margin: 34px 0 40px
+  border-radius: 30px
+  backdrop-filter: blur(20px)
+  background: rgba(29, 38, 52, 0.6)
+  padding: 20px
+  display: inline-flex
+  align-items: center
+
+.discount-text
+  font-family: $font-mont
+  padding-left: 28px
+  white-space: nowrap
+.discount-text-1
+  font-size: 20px
+  letter-spacing: 2px
+  font-weight: 400
+  color: #7787A0
+  position: relative
+  display: inline-block
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 50%
+    background: #FF0000
+    width: 100%
+    height: 1px
+    transform: rotate(8deg)
+.discount-text-2
+  letter-spacing: 1px
+  color: #F3B85E
+  font-size: 36px
+  font-weight: 700
+  span
+    font-weight: 300
+.header-bnf-holder
+  max-width: 600px
+  display: flex
+  flex-wrap: wrap
+.header-bnf:nth-child(odd)
+  max-width: 290px
+  margin-right: 40px
+.header-bnf:nth-child(even)
+  max-width: 260px
+.header-bnf
+  padding-left: 50px
+  color: #a5bdf4
+  position: relative
+  margin-bottom: 30px
+  font-family: $font-mont
+  img
+    position: absolute
+    left: 0
+    top: 0
+    max-width: 38px
+  h1,h2,h3,h4,h5,h6
+    margin-bottom: 4px
+    font-weight: 700
+
+    letter-spacing: .9px
+    font-size: 16px
+    line-height: 20px
+  p
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: .7px
+
+.header-clouds
+  bottom: -310px
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 100
+.header-img
+  pointer-events: none
+  position: relative
+  z-index: 1
+  position: absolute
+  right: -90px
+  bottom: -304px
+  // border: 1px solid yellow
+  width: 802px
+  height: 900px
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  img
+    max-width: 100%
+    position: relative
+.product-vars
+  position: absolute
+  top: 189px
+  right: 80px
+  z-index: 100
+  display: flex
+  flex-direction: column
+  font-size: 21.33px
+  font-family: $font-kyiv-reg
+  letter-spacing: 0.8px
+  color: #1E2739
+  text-align: center
+  div
+    margin-bottom: 25px
+    display: flex
+    align-items: center
+    border-radius: 16px
+    box-shadow: 0px 0px 33.33px 0px rgba(165, 189, 244, 0.75)
+    background: radial-gradient(48.08% 93.34% at 50% 50%,rgb(196, 214, 255) 34.5%,rgb(165, 189, 244) 100%)
+    min-height: 68px
+    padding: 0 9px
+
+//░█████╗░░█████╗░███╗░░██╗░██████╗
+//██╔══██╗██╔══██╗████╗░██║██╔════╝
+//██║░░╚═╝██║░░██║██╔██╗██║╚█████╗░
+//██║░░██╗██║░░██║██║╚████║░╚═══██╗
+//╚█████╔╝╚█████╔╝██║░╚███║██████╔╝
+//░╚════╝░░╚════╝░╚═╝░░╚══╝╚═════╝░
+.cons
+  padding: 0 0 100px
+  .section-title
+    text-align: center
+#cons2
+  padding: 40px 0 100px
+//-██████╗░░█████╗░██╗░░░██╗██████╗░██╗░░░░░███████╗
+//-██╔══██╗██╔══██╗██║░░░██║██╔══██╗██║░░░░░██╔════╝
+//-██║░░██║██║░░██║██║░░░██║██████╦╝██║░░░░░█████╗░░
+//-██║░░██║██║░░██║██║░░░██║██╔══██╗██║░░░░░██╔══╝░░
+//-██████╔╝╚█████╔╝╚██████╔╝██████╦╝███████╗███████╗
+//-╚═════╝░░╚════╝░░╚═════╝░╚═════╝░╚══════╝╚══════╝
+.double
+  padding: 78px 0 0
+  z-index: 21
+  .banner
+    margin-top: 160px
+.double-box
+  margin-top: 50px
+
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr))
+  grid-gap: 14px
+.double-card
+  opacity: 0
+  overflow: hidden
+  box-shadow: 0px 0px 75px 0px rgba(5, 16, 29, 0.07)
+  background: rgb(255, 255, 255)
+  border-radius: 25px
+  padding: 23px 30px 23px 122px
+  position: relative
+  font-family: $font-mont
+  min-height: 164px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  h1,h2,h3,h4,h5,h6
+    margin-bottom: 8px
+    font-weight: 700
+    letter-spacing: .9px
+    font-size: 15px
+    color: #0F1824
+    // line-height: 20px
+  p
+    color: #767C84
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+    letter-spacing: .7px
+.double-card-img
+  position: absolute
+  left: 0
+  top: 0
+  height: 100%
+  width: 96px
+.double-inner
+  display: flex
+.double-col-1
+  max-width: 710px
+.double-col-2
+  position: relative
+  width: 490px
+  flex-shrink: 0
+  display: flex
+  align-items: flex-end
+  justify-content: center
+.stamp
+  background: url(../img/drop.svg) no-repeat center 33px, url(../img/double-ico.png) no-repeat center center / cover
+  position: absolute
+  z-index: 100
+  width: 165px
+  height: 165px
+  top: -5px
+  left: 10px
+  color: #6D91E4
+  font-family: $font-kyiv-heavy
+  letter-spacing: 1px
+  font-size: 20px
+  text-align: center
+  padding: 67px 20px 10px 20px
+  transform: rotate(12deg)
+.quiz-stamp
+  background: url(../img/quiz-stamp.svg) no-repeat center center / cover
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+
+  width: 122px
+  height: 122px
+  bottom: 25px
+  left: 58px
+  color: #6D91E4
+  font-family: $font-kyiv-heavy
+  letter-spacing: 1px
+  font-size: 16px
+  text-align: center
+  padding: 0 10px
+  transform: rotate(-29deg)
+
+//░██╗░░░░░░░██╗░█████╗░██████╗░██╗░░██╗
+//░██║░░██╗░░██║██╔══██╗██╔══██╗██║░██╔╝
+//░╚██╗████╗██╔╝██║░░██║██████╔╝█████═╝░
+//░░████╔═████║░██║░░██║██╔══██╗██╔═██╗░
+//░░╚██╔╝░╚██╔╝░╚█████╔╝██║░░██║██║░╚██╗
+//░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝
+.work
+  margin-top: -70px
+  background: #fff url(../img/work-bg.png) no-repeat center center / 100% 100%
+  padding: 250px 0
+  .section-title
+    text-align: center
+.work-box
+  position: relative
+  justify-content: space-between
+  align-items: center
+  display: flex
+  padding: 0 20px
+  margin-top: 140px
+.work-img-box
+
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  // border: 1px dashed red
+  width: 760px
+  height: 760px
+  background: url(../img/work-frame.png) no-repeat center center / cover
+  display: flex
+  align-items: flex-end
+  justify-content: center
+.work-img
+  position: relative
+  bottom: -40px
+  left: 20px
+.work-col
+  width: 344px
+.work-col-1
+  .work-card:nth-child(even)
+    position: relative
+    left: -30px
+.work-col-2
+  .work-card:nth-child(even)
+    position: relative
+    right: -30px
+  .work-num
+    left: auto
+    right: 17px
+  .work-card
+    padding: 30px 40px 10px 48px
+    &:after
+      left: auto
+      right: -27px
+.work-card,.warr-ani
+  opacity: 0
+  transform: translate(0, 50px)
+.footer-ani
+  opacity: 0
+  transform: translateY(50px)
+
+.work-card
+  padding: 30px 40px 10px 60px
+  position: relative
+  border-radius: 25px
+  box-shadow: 0px 0px 75px 0px rgba(5, 16, 29, 0.07)
+  background: rgb(255, 255, 255)
+  overflow: hidden
+  margin: 20px 0
+  font-family: $font-mont
+  h1,h2,h3,h4,h5,h6
+    margin-bottom: 8px
+    font-weight: 700
+    letter-spacing: .9px
+    font-size: 14px
+    color: #0F1824
+    // line-height: 20px
+  p
+    color: #767C84
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+    letter-spacing: .6px
+    margin-bottom: 18px
+  &:after
+    content: ''
+    position: absolute
+    height: 74px
+    width: 74px
+    border-radius: 50%
+    left: -27px
+    top: -27px
+    background: #FFD465
+.work-num
+  position: absolute
+  left: 17px
+  top: 15px
+  z-index: 10
+  font-size: 14px
+  font-weight: 900
+  font-family: $font-mont
+.work-dec-1
+  top: -70px
+  left: -110px
+.work-dec-2
+  bottom: -150px
+  right: -240px
+.inst
+  .section-text
+    margin: 20px 0
+.inst-box
+  display: flex
+  align-items: center
+.inst-col-1
+  padding-right: 30px
+.inst-col-2
+  overflow: hidden
+  border-radius: 45px
+  flex-shrink: 0
+  width: 720px
+  height: 424px
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  &:hover:before
+    transform: translate(-50%,-50%) scale(1.1)
+  &:before
+    content: url(../img/youtube-ico.png)
+    position: absolute
+    transition: .3s
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%) scale(1)
+    z-index: 10
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: rgba(30, 39, 57, 0.45)
+    z-index: 1
+  a
+    width: 100%
+    height: 100%
+    position: relative
+    z-index: 100
+    display: block
+
+//██████╗░░█████╗░██████╗░░█████╗░███╗░░░███╗
+//██╔══██╗██╔══██╗██╔══██╗██╔══██╗████╗░████║
+//██████╔╝███████║██████╔╝███████║██╔████╔██║
+//██╔═══╝░██╔══██║██╔══██╗██╔══██║██║╚██╔╝██║
+//██║░░░░░██║░░██║██║░░██║██║░░██║██║░╚═╝░██║
+//╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝
+.param
+  padding: 200px 0 100px 0
+  .section-title
+    text-align: center
+  .banner
+    margin-top: 160px
+.param-box
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  margin: 120px 0 130px 0
+.param-ani
+  opacity: 0
+
+.param-col-1
+  padding-right: 30px
+
+  img
+    max-width: 100%
+.param-col-2
+  width: 530px
+  flex-shrink: 0
+.param-text
+  font-family: $font-mont
+  font-weight: 400
+  line-height: 32px
+  letter-spacing: 1.2px
+  font-size: 24px
+  color: #0F1824
+  h1,h2,h3,h4,h5,h6
+    font-weight: 700
+    font-size: 24px
+  p
+    margin-bottom: 30px
+  strong
+    font-weight: 700
+.banner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-radius: 45px
+  background: url(../img/banner-bg.png) no-repeat center center / cover
+  color: #fff
+  font-family: $font-mont
+  font-weight: 400
+  font-size: 16px
+  line-height: 22px
+  letter-spacing: .7px
+  overflow: hidden
+  h1,h2,h3,h4,h5,h6
+    font-weight: 800
+    margin-bottom: 20px
+    font-size: 16px
+  strong
+    font-weight: 700
+.banner-text
+  padding: 40px 10px 40px 70px
+.banner-img
+  flex-shrink: 0
+  display: flex
+  align-self: stretch
+  align-items: flex-end
+  max-width: 370px
+  img
+    max-width: 100%
+//
+//░█████╗░░█████╗░███╗░░██╗████████╗
+//██╔══██╗██╔══██╗████╗░██║╚══██╔══╝
+//██║░░╚═╝██║░░██║██╔██╗██║░░░██║░░░
+//██║░░██╗██║░░██║██║╚████║░░░██║░░░
+//╚█████╔╝╚█████╔╝██║░╚███║░░░██║░░░
+//░╚════╝░░╚════╝░╚═╝░░╚══╝░░░╚═╝░░░
+.cont
+  padding: 70px 0
+  .section-title
+    text-align: center
+.cont-box
+  margin-top: 70px
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(18%, 1fr))
+  grid-gap: 16px
+.cont-card
+  opacity: 0
+  transform: translateX(50px)
+  border-radius: 23.9px
+  box-shadow: 0px 0px 71.69px 0px rgba(5, 16, 29, 0.07)
+  background: rgb(255, 255, 255)
+  font-family: $font-mont
+  font-weight: 500
+  font-size: 17px
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 55px 18px
+  line-height: 24px
+.bandel
+  margin-top: 190px
+  background: url(../img/bandel-bg.png) no-repeat center center / cover
+  padding: 58px 0 58px 66px
+  border-radius: 45px
+  color: #fff
+  position: relative
+  h1,h2,h3,h4,h5,h6
+    background: linear-gradient(108.92deg, rgb(255, 255, 255),rgb(184, 229, 255))
+    background-clip: text
+    color: transparent
+    display: inline-block
+    font-size: 40px
+    font-family: $font-kyiv-black
+    letter-spacing: 1.8px
+    margin-bottom: 14px
+  p
+    letter-spacing: .8px
+    font-size: 16px
+    font-family: $font-mont
+    font-weight: 500
+    line-height: 22px
+    margin-bottom: 36px
+  .custom-btn
+    margin-top: 26px
+.bandel-inner
+  max-width: 410px
+  position: relative
+  z-index: 100
+.bandel-img
+  position: absolute
+  bottom: 0
+  right: -40px
+  max-width: 68%
+//
+//░██╗░░░░░░░██╗░█████╗░██████╗░██████╗░
+//░██║░░██╗░░██║██╔══██╗██╔══██╗██╔══██╗
+//░╚██╗████╗██╔╝███████║██████╔╝██████╔╝
+//░░████╔═████║░██╔══██║██╔══██╗██╔══██╗
+//░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░░██║
+//░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝
+.warr
+  text-align: center
+  font-family: $font-mont
+  background: url(../img/warr-bg.png) no-repeat center center
+
+.warr-title
+
+  font-size: 75px
+  font-weight: 700
+  background: radial-gradient(64.20% 93.34% at 50% 50%,rgb(255, 212, 101) 34.5%,rgb(241, 192, 66) 100%)
+  background-clip: text
+  color: transparent
+  letter-spacing: 4px
+  display: inline-block
+.warr-text
+  font-size: 20px
+  line-height: 24px
+  max-width: 740px
+  margin: 24px auto 0 auto
+  color: #767C84
+  letter-spacing: 1px
+.warr-img-1,
+.warr-img-2
+  top: 50%
+  transform: translateY(-50%)
+.warr-img-1
+  left: -380px
+.warr-img-2
+  right: -380px
+.warr-inner
+  min-height: 834px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  padding: 100px 0
+
+//███████╗░█████╗░░█████╗░████████╗███████╗██████╗░
+//██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗
+//█████╗░░██║░░██║██║░░██║░░░██║░░░█████╗░░██████╔╝
+//██╔══╝░░██║░░██║██║░░██║░░░██║░░░██╔══╝░░██╔══██╗
+//██║░░░░░╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
+//╚═╝░░░░░░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
+.main-footer
+  overflow: hidden
+  position: relative
+  background: url(../img/footer-bg.png) no-repeat center center / cover
+  padding: 280px 0 0
+.footer-text
+  text-align: center
+  color: #A5BDF4
+
+  h1,h2,h3,h4,h5,h6
+    background: linear-gradient(108.92deg, rgb(255, 255, 255),rgb(184, 229, 255))
+    background-clip: text
+    color: transparent
+    display: inline-block
+    font-size: 48px
+    font-family: $font-kyiv-black
+    letter-spacing: 1.8px
+    margin-bottom: 24px
+  p
+    line-height: 38px
+    text-transform: uppercase
+    letter-spacing: 1.6px
+    font-size: 32px
+    font-family: $font-kyiv-reg
+  strong
+    font-family: $font-kyiv-bold
+.ask-clouds-top
+  position: absolute
+  top: -369px
+  margin-left: -20px
+  left: 50%
+  transform: translateX(-50%)
+.footer-btns
+  margin-top: 56px
+  display: flex
+  justify-content: center
+  a,button
+    margin: 10px
+.footer-bottom
+  margin-top: 120px
+  position: relative
+  z-index: 100
+  padding: 53px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: -3000px
+    width: 10000px
+    height: 1px
+    background: rgba(255, 255, 255, 0.07 )
+.credits
+  color: #C3C6CB
+  font-size: 11px
+  font-weight: 300
+  line-height: 16px
+  font-family: $font-mont
+  text-align: right
+  letter-spacing: 1.2px
+#thx-popup
+  background: #fff url(../img/thx-ico.png) no-repeat center top 50px
+  padding: 210px 20px 70px 20px
+  border-radius: 25px
+  width: 100%
+  max-width: 760px
+  text-align: center
+.thx-title
+  font-family: $font-kyiv-black
+
+  font-size: 40px
+  letter-spacing: 2px
+  color: #2E3C5B
+.thx-sub
+  padding-top: 25px
+
+  font-family: $font-mont
+  font-weight: 300
+  font-size: 24px
+  line-height: 34px
+  // letter-spacing: 1.5px
+.fancybox-button
+  background: transparent
+.fancybox-bg
+  background: transparent
+.fancybox-is-open .fancybox-bg
+  background: transparent
+  opacity: 1
+.fancybox-custom-overlay
+  z-index: 1000
+  position: fixed
+
+  background: rgba(30, 39, 57, 0.75)
+  backdrop-filter: blur(15px)
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+
+  opacity: 0
+  visibility: hidden
+  transition: opacity .2s
+  &.active
+    opacity: 1
+    visibility: visible
+
+.fancybox-slide--html .fancybox-close-small
+  right: 28px
+  top: 28px
+  opacity: 1
+  padding: 4px
+  path
+    fill: #CDE1FB
+#consl-popup
+  text-align: center
+  width: 480px
+  position: relative
+  background: #fff
+  border-radius: 45px
+  padding: 50px 80px 70px 80px
+  input[type='submit']
+    margin-top: 40px
+  .section-title
+    margin-bottom: 40px
+  &:after
+    content: ""
+    position: absolute
+    border-radius: 35px
+    left: 14px
+    right: 14px
+    top: 14px
+    bottom: 14px
+    border: 1px solid #F0F5FF
+    pointer-events: none
+  input
+    width: 100%
+    display: block
+.form-title
+  font-size: 40px
+  font-family: $font-kyiv-black
+.custom-label
+  display: block
+  color: rgb(30, 39, 57)
+  font-size: 11px
+  letter-spacing: 1px
+  text-transform: uppercase
+  margin: 20px 0 10px
+  font-family: $font-kyiv-reg
+.custom-input, .custom-textarea
+  color: #1E2739
+  height: 76px
+  line-height: 76px
+  border: 1px solid rgb(203, 213, 234)
+  border-radius: 25px
+
+  background: #fff
+  font-size: 14px
+  letter-spacing: 1.3px
+  font-family: $font-med
+  padding: 0 32px 0 22px
+  text-align: center
+  display: block
+
+.custom-input:focus
+  border: 1px solid rgb(109, 145, 228)
+  box-shadow: 0px 3px 18px 0px rgba(255, 255, 255, 0.5)
+.consl-form
+  input::-webkit-input-placeholder
+    color: rgb(154, 166, 191)
+    font-size: 14px
+    letter-spacing: 1.3px
+    font-family: $font-roman
+    line-height: 76px
+  input::-moz-placeholder
+    color: rgb(154, 166, 191)
+    font-size: 14px
+    letter-spacing: 1.3px
+    font-family: $font-roman
+    line-height: 76px
+  input:-ms-input-placeholder
+    color: rgb(154, 166, 191)
+    font-size: 14px
+    letter-spacing: 1.3px
+    font-family: $font-roman
+    line-height: 76px
+  input:-moz-placeholder
+    color: rgb(154, 166, 191)
+    font-size: 14px
+    letter-spacing: 1.3px
+    font-family: $font-roman
+    line-height: 76px
+
+//░██████╗░██╗░░░██╗██╗███████╗
+//██╔═══██╗██║░░░██║██║╚════██║
+//██║██╗██║██║░░░██║██║░░███╔═╝
+//╚██████╔╝██║░░░██║██║██╔══╝░░
+//░╚═██╔═╝░╚██████╔╝██║███████╗
+//░░░╚═╝░░░░╚═════╝░╚═╝╚══════╝
+.tab,.tab2
+  display: none
+  &.active
+    display: block
+    button
+      margin: 10px
+
+.label-box-holder
+  display: flex
+  justify-content: space-between
+.label-box
+  display: flex
+  font-size: 16px
+  font-family: $font-kyiv-reg
+  margin-bottom: 20px
+
+.label-box-extra
+  display: flex
+  margin-bottom: 10px
+.label-box,.label-box-extra
+  input
+    position: absolute
+    opacity: 0
+    visibility: hidden
+.label-title,.label-title-big
+  font-size: 20px
+  font-family: $font-mont
+  font-weight: 500
+  margin-bottom: 20px
+  color: rgb(15, 24, 36)
+.label-title-big
+  font-size: 24px
+
+.quiz-label
+  letter-spacing: .8px
+  cursor: pointer
+  margin: 0 10px 10px 0
+  padding: 16px
+  border-radius: 12px
+  box-shadow: 0px 3px 18px 0px rgba(255, 255, 255, 0.5)
+  background: rgb(240, 245, 255)
+  color: rgb(30, 39, 57)
+  &.selected
+    box-shadow: 0px 0px 25px 0px rgba(165, 189, 244, 0.75)
+    background: radial-gradient(49.41% 93.34% at 50% 50%,rgb(196, 214, 255) 34.5%,rgb(165, 189, 244) 100%)
+.quiz-label-extra
+  margin: 0 14px 14px 0
+  width: 112px
+  text-align: center
+  color: rgb(46, 60, 91)
+  font-family: $font-mont
+  font-size: 11px
+  font-weight: 500
+  line-height: 16px
+  cursor: pointer
+  &.selected
+    .label-img
+      border: 3px solid rgb(122, 196, 42)
+      img
+        opacity: .3
+      &:after
+        opacity: 1
+.label-price
+  letter-spacing: .5px
+  display: block
+  padding-top: 5px
+  strong
+    font-size: 12px
+    font-weight: 700
+.label-img
+  margin-bottom: 18px
+  overflow: hidden
+  width: 100%
+  height: 112px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 26px
+  box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.1)
+  background: rgb(255, 255, 255)
+  border: 3px solid #fff
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100px
+    left: 0
+    top: 0
+    background: url(../img/label-check.png) no-repeat center center
+    z-index: 10
+    opacity: 0
+  img
+    max-width: 100%
+    max-height: 100%
+    height: auto
+.time-price
+  display: flex
+  margin: auto 0 28px
+.price-total
+  padding: 34px 46px
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='15' ry='15' stroke='%23ACBCDDFF' stroke-width='2' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e")
+  border-radius: 15px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-family: $font-kyiv-bold
+  font-size: 16px
+  color: #1E2739
+  letter-spacing: 1px
+  flex-grow: 1
+  span
+    font-size: 24px
+.timer-wrapper
+  margin-right: 14px
+  padding: 10px 26px
+  flex-shrink: 0
+  border-radius: 25px
+  font-family: $font-kyiv-reg
+  box-shadow: 0px 3px 18px 0px rgba(255, 255, 255, 0.5)
+  background: rgb(240, 245, 255)
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+.timer
+  display: flex
+  justify-content: center
+
+.timer-title
+  margin-bottom: 8px
+  letter-spacing: .5px
+  text-transform: uppercase
+  color: rgb(30, 39, 57)
+  font-family: $font-kyiv-reg
+  font-size: 11px
+.timer-item
+  background: $primary-color
+  color: #fff
+  margin: 0 6px
+  border-radius: 10px
+  min-width: 48px
+  text-align: center
+  padding: 3px 0 4px 0
+  position: relative
+.timer-item:not(:last-child)
+  &:after,&:before
+    content: ''
+    width: 3px
+    height: 3px
+    border-radius: 1px
+    background: $primary-color
+    position: absolute
+    right: -7px
+  &:after
+    top: 14px
+  &:before
+    bottom: 14px
+.timer-num
+  font-size: 20px
+  letter-spacing: 1px
+.timer-text
+  font-size: 8px
+  text-transform: uppercase
+  letter-spacing: 1px
+.quiz
+  margin-top: 110px
+  position: relative
+  border-radius: 45px
+
+  box-shadow: 0px 0px 75px 0px rgba(5, 16, 29, 0.07)
+  background: rgb(255, 255, 255)
+  display: flex
+  &:after
+    content: ""
+    position: absolute
+    border-radius: 35px
+    left: 14px
+    right: 14px
+    top: 14px
+    bottom: 14px
+    border: 1px solid #F0F5FF
+    pointer-events: none
+.quiz-form
+  // position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  text-align: center
+  .input-row
+    width: 48%
+  .custom-input
+    display: block
+    width: 100%
+.quiz-submit
+  display: flex
+  justify-content: flex-end
+  position: absolute
+  right: 40px
+  bottom: 53px
+  z-index: 100
+.quiz-img-wrap
+  z-index: 100
+  display: flex
+  align-items: center
+  // justify-content: center
+  pointer-events: none
+  flex-shrink: 0
+  width: 500px
+  position: relative
+  left: -30px
+  &:after
+    opacity: 0
+    content: ''
+    background: url(../img/quiz-img-check.png) no-repeat center center
+    position: absolute
+    left: 20px
+    top: 0
+    width: 100%
+    height: 100%
+  &.disabled
+    &:after
+      opacity: 1
+    .quiz-img
+      opacity: .3
+    .quiz-stamp
+      display: none
+.quiz-bottom
+  position: relative
+  min-height: 82px
+.quiz-content
+  flex-grow: 1
+  padding: 58px 40px 50px 0
+  position: relative
+  display: flex
+  flex-direction: column
+.quiz-img
+  position: relative
+
+.free-progress
+  position: absolute
+  bottom: 15px
+  left: 0
+  font-size: 15px
+  text-transform: uppercase
+  letter-spacing: 1px
+  border-radius: 25px
+  background: #E3ECFF
+  width: 445px
+  height: 46px
+  line-height: 46px
+  overflow: hidden
+  span
+    font-family: $font-bold
+  .bar
+    transition: .3s
+    width: 0%
+    height: 100%
+    border-radius: 25px
+
+    background: #6D91E4
+    text-align: center
+    width: 33.3%
+    color: #fff
+    &.step2
+      width: 66.6%
+    &.full
+      width: 100%
+#prev,#prev2
+  display: none
+#next,#next2
+  margin-left: auto
+  display: block
+@import 'media'

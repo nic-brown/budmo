@@ -1,0 +1,232 @@
+.contact-page-box {
+  position: relative;
+  z-index: 10;
+  padding-top: 25px;
+}
+
+.contact-page-box-l {
+  width: 60%;
+  padding-right: 50px;
+  overflow: hidden;
+  position: relative;
+  z-index: 11;
+}
+.contact-page-box-l .sub-spec {
+  max-width: 380px;
+}
+
+.contact-page-box-r {
+  width: 40%;
+  margin-top: -15px;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-page-extra-box {
+  margin-top: 60px;
+}
+
+.sub-spec {
+  color: #333333;
+  font-family: "Gilroy-SemiBold";
+  line-height: 20px;
+}
+
+.contact-col-p-1 {
+  width: 100%;
+}
+
+.contact-col-p-2, .contact-col-p-3 {
+  width: 100%;
+}
+.contact-col-p-2 .contact-col-p-sub, .contact-col-p-3 .contact-col-p-sub {
+  border-top: 1px solid #333333;
+}
+
+.contact-col-p-sub {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.contact-col-title-p {
+  font-family: "Gilroy-Bold";
+  font-size: 18px;
+  letter-spacing: 1.8px;
+}
+
+.contact-col-p-1 {
+  margin-bottom: 55px;
+}
+
+.contact-col-p-1 .contact-col-p-spec-item {
+  width: calc(50% - 20px);
+}
+.contact-col-p-1 .contact-col-p-spec-item a {
+  font-family: "Gilroy-SemiBold";
+  color: #333333;
+  font-size: 24px;
+  display: block;
+  line-height: 26px;
+  padding: 12px 0 20px 0;
+  letter-spacing: 2.4px;
+}
+.contact-col-p-1 .contact-col-p-spec-item a span {
+  font-family: "Gilroy-Bold";
+}
+.contact-col-p-1 .contact-col-p-spec-item .contact-col-p-sub:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200%;
+  height: 1px;
+  background-color: #333333;
+}
+
+.contact-col-p-2 .contact-col-p-spec-item {
+  width: calc(50% - 20px);
+}
+.contact-col-p-2 .contact-col-p-spec-item .contact-col-p-sub {
+  margin-top: 10px;
+}
+.contact-col-p-2 .contact-col-p-spec-item .contact-col-title-p {
+  padding-bottom: 10px;
+}
+
+.contact-col-spec-inner {
+  min-height: 38px;
+}
+
+.contact-col-title-p-mail {
+  font-family: "Gilroy-Bold";
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #333333;
+}
+
+.contact-page-soc a {
+  font-family: "Gilroy-Bold";
+  color: #212121;
+}
+.contact-page-soc a i {
+  color: #212121;
+}
+
+.contact-page-box-r-img {
+  position: relative;
+}
+.contact-page-box-r-img .girl-img-mask {
+  position: absolute;
+  left: 53%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -124px;
+}
+.contact-page-box-r-img .girl-img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  position: relative;
+}
+
+.girl-box {
+  margin-top: -60px;
+  padding: 24px 25px 20px 25px;
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  border-bottom-color: #fff;
+  position: relative;
+  font-family: "Gilroy-SemiBold";
+  color: #262626;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 22px;
+  position: relative;
+}
+.girl-box:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+}
+
+.girl-box-title {
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.map-card {
+  border: 1px solid #d4d4d4;
+  background-color: #ffffff;
+  padding: 25px;
+  position: relative;
+  margin-bottom: 22px;
+  z-index: 9;
+  color: #333333;
+}
+.map-card .btn-ani {
+  margin-top: 30px;
+}
+.map-card .btn-ani span {
+  background-color: #fff;
+}
+
+.map-card-l {
+  width: 49%;
+  padding: 14px 0 0 20px;
+}
+
+.map-card-r {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 51%;
+  height: 360px;
+  -webkit-box-shadow: 0 0 25px rgba(0, 91, 146, 0.3);
+          box-shadow: 0 0 25px rgba(0, 91, 146, 0.3);
+}
+
+.map-card-title {
+  font-family: "Gilroy-SemiBold";
+  color: #333333;
+  font-size: 28px;
+  line-height: 23px;
+  letter-spacing: 2.24px;
+}
+
+.map-card-text {
+  margin: 25px 0 34px;
+  line-height: 20px;
+  letter-spacing: 1.12px;
+  font-family: "Gilroy-SemiBold";
+}
+
+.map-tels a, .map-mail {
+  color: #333333;
+  font-family: "Gilroy-SemiBold";
+  font-size: 20px;
+  display: block;
+  line-height: 20px;
+  letter-spacing: 1.6px;
+}
+.map-tels a span, .map-mail span {
+  font-family: "Gilroy-Bold";
+}
+
+.map-tels a {
+  padding: 5px 0;
+}
+
+.map-mail {
+  padding: 14px 0;
+}
+
+.contact-page-sec {
+  overflow: hidden;
+}

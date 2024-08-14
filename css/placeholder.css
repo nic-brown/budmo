@@ -1,0 +1,102 @@
+.footer-newsletter input::-webkit-input-placeholder, .header-search input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 18px;
+}
+.footer-newsletter input::-moz-placeholder, .header-search input::-moz-placeholder {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 18px;
+}
+.footer-newsletter input:-ms-input-placeholder, .header-search input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 18px;
+}
+.footer-newsletter input:-moz-placeholder, .header-search input:-moz-placeholder {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 18px;
+}
+
+.header-search input::-webkit-input-placeholder {
+  color: #2f3647;
+  line-height: 45px;
+}
+.header-search input::-moz-placeholder {
+  color: #2f3647;
+  line-height: 45px;
+}
+.header-search input:-ms-input-placeholder {
+  color: #2f3647;
+  line-height: 45px;
+}
+.header-search input:-moz-placeholder {
+  color: #2f3647;
+  line-height: 45px;
+}
+
+#call-popup input::-webkit-input-placeholder, #login-popup input::-webkit-input-placeholder, #signup-popup input::-webkit-input-placeholder, .promo-code input::-webkit-input-placeholder {
+  color: #2f3647;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 35px;
+}
+#call-popup input::-moz-placeholder, #login-popup input::-moz-placeholder, #signup-popup input::-moz-placeholder, .promo-code input::-moz-placeholder {
+  color: #2f3647;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 35px;
+}
+#call-popup input:-ms-input-placeholder, #login-popup input:-ms-input-placeholder, #signup-popup input:-ms-input-placeholder, .promo-code input:-ms-input-placeholder {
+  color: #2f3647;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 35px;
+}
+#call-popup input:-moz-placeholder, #login-popup input:-moz-placeholder, #signup-popup input:-moz-placeholder, .promo-code input:-moz-placeholder {
+  color: #2f3647;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 35px;
+}
+
+.custom-textarea::-webkit-input-placeholder {
+  color: #2f3647;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.custom-textarea::-moz-placeholder {
+  color: #2f3647;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.custom-textarea:-ms-input-placeholder {
+  color: #2f3647;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.custom-textarea:-moz-placeholder {
+  color: #2f3647;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-family: "Montserrat", sans-serif;
+}
