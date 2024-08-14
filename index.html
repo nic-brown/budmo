@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#111111" />
+    <title>Будьмо</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin> -->
+    <!-- дуже важлива штучка вверху цей прелоадер шрифтів -->
+
+    <!-- 
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/jquery.beefup.css" /> -->
+
+    <!-- <link rel="stylesheet" href="css/libs.min.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/jquery.beefup.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="datapicker/air-datepicker.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+      var WPJS = {};
+      WPJS.home_locale = "uk";
+      // WPJS.home_url = '<?php echo get_template_directory_uri(); ?>';
+
+      let WPcustom = {
+        show_serv_menu_text1: "Показати список етапів",
+        show_serv_menu_text2: "Приховати список етапів",
+      };
+    </script>
+  </head>
+  <!-- section>.container>.row>.col  -->
+
+  <body>
+    <!-- <div class="loader">
+      <img src="img/logo.png" alt="" />
+      <div class="logo-circle">
+        <span class="logo-circle-1"></span><span class="logo-circle-2"></span><span class="logo-circle-3"></span><span class="logo-circle-4"></span><span class="logo-circle-5"></span>
+      </div>
+    </div>
+
+    <script>
+      setTimeout(() => {
+        $(".loader").addClass("hidden");
+      }, "1600");
+    </script> -->
+    <nav id="main-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="nav-inner">
+              <div class="nav-col reg-logo">
+                <a href="#" class="logo">
+                  <img src="img/logo.png" alt="" />
+                </a>
+                <div class="logo-text">
+                  <img src="img/logo-text.png" alt="" class="logo-text-img" />
+                  ТМ "БУДЬМО" Авторська майстерня домашніх дистиляторів
+                </div>
+              </div>
+
+              <div class="nav-col reg-burger">
+                <button class="burger-btn">
+                  <svg class="burger-close" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.89624" y="17.2782" width="23.5714" height="1.57143" rx="0.785714" transform="rotate(-45 0.89624 17.2782)" fill="#0D1E3A" />
+                    <rect x="2.00732" y="0.324951" width="23.5714" height="1.57143" rx="0.785714" transform="rotate(45 2.00732 0.324951)" fill="#0D1E3A" />
+                  </svg>
+
+                  <svg class="burger-open" width="30.000000" height="14.000000" viewBox="0 0 30 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <desc>Created with Pixso.</desc>
+                    <defs />
+                    <rect id="Rectangle 1" rx="1.000000" width="22.000000" height="2.000000" fill="#FFFFFF" fill-opacity="1.000000" />
+                    <rect id="Rectangle 2" y="6.000000" rx="1.000000" width="30.000000" height="2.000000" fill="#FFFFFF" fill-opacity="1.000000" />
+                    <rect id="Rectangle 3" y="12.000000" rx="1.000000" width="30.000000" height="2.000000" fill="#FFFFFF" fill-opacity="1.000000" />
+                  </svg>
+                </button>
+
+                <div class="menu-wrapper">
+                  <ul class="main-menu">
+                    <li><a href="#work" class="scroll-to"> Принцип роботи</a></li>
+                    <li><a href="#inst" class="scroll-to"> Відео-інструкція</a></li>
+                    <li><a href="#param" class="scroll-to">Характеристики </a></li>
+                    <li><a href="#cont" class="scroll-to"> Комплектація</a></li>
+                    <li><a href="#bandel" class="scroll-to"> Доставка</a></li>
+                    <li><a href="#warr" class="scroll-to">Гарантія </a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="nav-col reg-tel-box">
+                <div class="reg-nav-text">Телефонуйте Пн-Пт з 9:00-18:00</div>
+                <a href="tel:" class="reg-tel">+38 (050) 426-00-94</a>
+                <a href="tel:380504260094" class="tel-hidden">
+                  <span class="tel-hidden-pulse"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="menu-overlay"></div>
+
+    <header class="main-header" style="background-image: url(img/header-bg.jpg)">
+      <div class="header-inner">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <img src="img/header-dec-1.png" alt="" class="header-dec-1 absolute" />
+              <img src="img/header-dec-2.png" alt="" class="header-dec-2 absolute" />
+              <h1 class="main-title">
+                <span>"ЧУМАК" — Чистий результат з кожної краплі</span> <br />
+                Дистиллятор подвійної перегонки
+              </h1>
+
+              <div class="discount-holder">
+                <button class="custom-btn-ico-large open-popup" data-src="#consl-popup">замовити зі знижкою <img src="img/one-finger-click.svg" alt="" /></button>
+                <div class="discount-text">
+                  <div class="discount-text-1">9 500 грн</div>
+                  <div class="discount-text-2">8 500 <span>грн</span></div>
+                </div>
+              </div>
+
+              <div class="header-bnf-holder">
+                <div class="header-bnf">
+                  <img src="img/header-bnf-1.svg" alt="" class="header-bnf-img" />
+                  <h3>Модульна конструкція</h3>
+                  <p>Можливість модернізації та встановлення додаткових модулей. Розвивайте своє хобі безмежно!</p>
+                </div>
+                <div class="header-bnf">
+                  <img src="img/header-bnf-2.svg" alt="" class="header-bnf-img" />
+                  <h3>Технічна підтримка</h3>
+                  <p>Ми будемо поруч , поки ви не навчитесь робити смачні напої!</p>
+                </div>
+              </div>
+
+              <div class="header-img">
+                <img src="img/product.png" alt="" />
+                <div class="product-vars">
+                  <div>25 л</div>
+                  <div>37 л</div>
+                  <div>50 л</div>
+                  <div>70 л</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img src="img/header-clouds.png" alt="" class="header-clouds absolute" />
+    </header>
+
+    <section class="cons" id="cons">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="section-title">
+              Підберіть ідеальну <br />
+              <strong>конструкцію дистилятора</strong>
+            </h2>
+
+            <div class="quiz" id="quiz1">
+              <div class="quiz-img-wrap quiz-img-wrap-1">
+                <div class="quiz-stamp">
+                  5 років <br />
+                  гарантії
+                </div>
+                <img src="img/stal-gas.png" alt="" class="quiz-img" id="quiz-img" />
+              </div>
+              <div class="quiz-content">
+                <!-- Tabs -->
+                <div class="tab active">
+                  <div class="label-box-holder">
+                    <div class="label-box-item">
+                      <div class="label-title">Об’єм перегінного куба:</div>
+                      <div class="label-box">
+                        <label class="quiz-label"><input type="radio" name="capacity" data-price="100" value="25 л" checked />25 л</label>
+                        <label class="quiz-label"><input type="radio" name="capacity" data-price="200" value="37 л" />37 л</label>
+                        <label class="quiz-label"><input type="radio" name="capacity" data-price="300" value="50 л" />50 л</label>
+                        <label class="quiz-label"><input type="radio" name="capacity" data-price="400" value="70 л" />70 л</label>
+                      </div>
+                    </div>
+                    <div class="label-box-item">
+                      <div class="label-title">Контур дистиляції:</div>
+                      <div class="label-box">
+                        <label class="quiz-label"><input type="radio" class="image-type" data-picture="mid" name="kontur" data-price="110" value="Мідь" /> Мідь</label>
+                        <label class="quiz-label"
+                          ><input type="radio" class="image-type" data-picture="stal" name="kontur" data-price="210" value="Нержавіючаа сталь" checked />Нержавіючаа сталь</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="label-title">Нагрів:</div>
+                  <div class="label-box">
+                    <label class="quiz-label"><input type="radio" class="image-color" data-picture="electro" name="nahriv" data-price="125" value="Електро" />Електро</label>
+                    <label class="quiz-label"><input type="radio" class="image-color" data-picture="gas" name="nahriv" data-price="245" value="Газ / індукція" checked />Газ / індукція</label>
+                  </div>
+                </div>
+
+                <div class="tab">
+                  <div class="label-title-big">Додаткова комплектація:</div>
+
+                  <div class="label-box-extra">
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra1" data-price="43" value="Сітка РПН мідна" />
+                      <span class="label-img"><img src="img/label1.png" alt="" /></span>
+                      Сітка РПН мідна
+                      <span class="label-price"><strong>43</strong> грн</span></label
+                    >
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra2" data-price="12" value="Пристрій безперервного контролю міцності" />
+                      <span class="label-img"><img src="img/label2.png" alt="" /></span>
+                      Пристрій безперервного контролю міцності <span class="label-price"><strong>12</strong> грн</span></label
+                    >
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra3" data-price="64" value="Набір спиртометрів професійний" />
+                      <span class="label-img"><img src="img/label3.png" alt="" /></span>
+                      Набір спиртометрів професійний<span class="label-price"><strong>64</strong> грн</span></label
+                    >
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra4" data-price="78" value="Фальшдно" />
+                      <span class="label-img"><img src="img/label4.png" alt="" /></span>
+                      Фальшдно<span class="label-price"><strong>78</strong> грн</span></label
+                    >
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra5" data-price="45" value="Сталева для ароматизації" />
+                      <span class="label-img"><img src="img/label5.png" alt="" /></span>
+                      Сталева для ароматизації<span class="label-price"><strong>45</strong> грн</span></label
+                    >
+                  </div>
+                </div>
+
+                <div class="tab">
+                  <div class="label-title-big">Введіть ваші контакти:</div>
+
+                  <div class="quiz-form">
+                    <div class="input-row">
+                      <label class="custom-label">ваше ім’я</label>
+                      <input type="text" class="custom-input" placeholder="Введіть ім’я" />
+                    </div>
+
+                    <div class="input-row">
+                      <label class="custom-label">ваш номер телефону</label>
+                      <input type="text" class="custom-input" placeholder="+38 0" />
+                    </div>
+
+                    <div class="input-row quiz-submit">
+                      <input type="submit" value="замовити" class="custom-btn" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="time-price">
+                  <div class="timer-wrapper">
+                    <div class="timer-title">ЗАМОВЛЯЙТЕ ЗІ ЗНИЖКОЮ</div>
+                    <div class="timer">
+                      <div class="timer-item">
+                        <div class="timer-h timer-num">0</div>
+                        <div class="timer-text">год</div>
+                      </div>
+                      <div class="timer-item">
+                        <div class="timer-m timer-num">0</div>
+                        <div class="timer-text">хв</div>
+                      </div>
+                      <div class="timer-item">
+                        <div class="timer-s timer-num">0</div>
+                        <div class="timer-text">сек</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="price-total price-total-1">
+                    <div class="price-l">Ціна:</div>
+                    <div class="price-r"><span></span> грн</div>
+                  </div>
+                </div>
+
+                <div class="quiz-bottom">
+                  <div class="free-progress">
+                    <div class="bar bar-1">крок <span>1</span> / 3</div>
+                  </div>
+
+                  <!-- Buttons -->
+                  <button id="prev">Previous</button>
+                  <button id="next" class="custom-btn-ico-right">далі <img src="img/custom-btn-ico-right.svg" alt="" /></button>
+
+                  <!-- Error text -->
+                  <p id="error"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="double" id="double">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="double-inner">
+              <div class="double-col double-col-1">
+                <h2 class="section-title">
+                  Подвійна перегонка <br />
+                  <strong>справді працює</strong>
+                </h2>
+
+                <div class="double-box">
+                  <div class="double-card">
+                    <div class="double-card-img" style="background: url(img/double1.png) no-repeat center center / cover"></div>
+                    <div class="double-card-text">
+                      <h3>Мідне дно другого контуру</h3>
+                      <p>Тільки за рахунок міді можливо досягнути потрібної температури та якості кінцевої очистки</p>
+                    </div>
+                  </div>
+                  <div class="double-card">
+                    <div class="double-card-img" style="background: url(img/double2.png) no-repeat center center / cover"></div>
+                    <div class="double-card-text">
+                      <h3>Професійний перегінний куб</h3>
+                      <p>З широкою горловиною, зручна експлуатація, легко працювати, легко мити</p>
+                    </div>
+                  </div>
+                  <div class="double-card">
+                    <div class="double-card-img" style="background: url(img/double3.png) no-repeat center center / cover"></div>
+                    <div class="double-card-text">
+                      <h3>Багатошарове термоакумулюєче дно</h3>
+                      <p>Рівномірний нагрів , не пригоряє, підходить для індукційних плит</p>
+                    </div>
+                  </div>
+                  <div class="double-card">
+                    <div class="double-card-img" style="background: url(img/double4.png) no-repeat center center / cover"></div>
+                    <div class="double-card-text">
+                      <h3>Зливний кран 1/2 дюйми</h3>
+                      <p>Вже в базовій комплектації, зручність в роботі. Не треба підіймати важкий дистилятор</p>
+                    </div>
+                  </div>
+                  <div class="double-card">
+                    <div class="double-card-img" style="background: url(img/double5.png) no-repeat center center / cover"></div>
+                    <div class="double-card-text">
+                      <h3>Електричний нагрів</h3>
+                      <p>Кламповий вихід з заглушкою під монтаж тена вже в базовій комплектації</p>
+                    </div>
+                  </div>
+                  <div class="double-card">
+                    <div class="double-card-img" style="background: url(img/double6.png) no-repeat center center / cover"></div>
+                    <div class="double-card-text">
+                      <h3>Фальшдно</h3>
+                      <p>Перегонка густих зернових та фруктових браг длявиробництва елітних напоїв</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="double-col double-col-2">
+                <div class="stamp">
+                  1.5 л <br />
+                  за годину
+                </div>
+
+                <img src="img/product.gif" alt="" />
+              </div>
+            </div>
+
+            <div class="banner">
+              <div class="banner-text">
+                <h3>За рахунок продуманої до дрібниць конструкції та багатофункціональної комплектації апарат дозволяє працювати в декількох режимах:</h3>
+                <p>Подвійна перегонка | Ароматизація | Мацерація | Режим спиртколони | Класична дистиляція</p>
+              </div>
+              <div class="banner-img">
+                <img src="img/double-banner.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="img/work-dec-1.png" alt="" class="work-dec-1 absolute" />
+            <img src="img/work-dec-2.png" alt="" class="work-dec-2 absolute" />
+            <h2 class="section-title">
+              Принцип роботи <br />
+              <strong>дистилятора</strong>
+            </h2>
+
+            <div class="work-box">
+              <div class="work-img-box">
+                <img src="img/work-img.png" alt="" class="work-img" />
+              </div>
+              <div class="work-col work-col-1">
+                <div class="work-card">
+                  <div class="work-num">1</div>
+                  <h3>Заповнення баків</h3>
+                  <p>
+                    Брага заливається в основний бак (перший контур ) на 3/4 від загальної ємності перегінного куба. У внутрішній бак ( другий контур ) заливається 250 мл води для запуску якісного
+                    процесу випаровування спирту сирцю
+                  </p>
+                </div>
+                <div class="work-card">
+                  <div class="work-num">2</div>
+                  <h3>Перший етап перегонки</h3>
+                  <p>Після нагріву браги до температури 76-84 градуси починається процес дистиляції. Спиртові пари проходячи через перший контур очищаються від найважчих шкідливих домішок.</p>
+                  <p>Охолоджувач конденсує первинний спирт- сирець , який зливається до внутрішнього куба</p>
+                </div>
+                <div class="work-card">
+                  <div class="work-num">3</div>
+                  <h3>Другий етап перегонки</h3>
+                  <p>В внутрішньому кубі відбувається розділення спирта на фракції та повторне випаровування.</p>
+                  <p>
+                    <strong
+                      >Важливі - лише конструктивні особливості Чумака , а саме верхне розташування внутрішнього бака (точка максимального нагріву) та мідне дно (максимальна теплопровідність)
+                      дозволяють отримати якісне очищення спирту та ідеальний смак готового продукту!</strong
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="work-col work-col-2">
+                <div class="work-card">
+                  <div class="work-num">4</div>
+                  <h3>Очищення та ароматизація</h3>
+                  <p>
+                    Проходячи через другий контур дистиляції розділена на фракції спиртова пара остаточно очищується, а також ароматизується , як що царга другого контуру заповнення ароматизуючими
+                    речовинами
+                  </p>
+                </div>
+                <div class="work-card">
+                  <div class="work-num">5</div>
+                  <h3>Отримання дистиляту</h3>
+                  <p>В результаті 2х етапів очищення ви отримаєте дистилят відмінної якості без сивухи , неприємного запаху тощо.</p>
+                  <p>Чистий , якісний смачний продукт!</p>
+                </div>
+                <div class="work-card">
+                  <div class="work-num">6</div>
+                  <h3>Важливо!</h3>
+                  <p>
+                    Хвости, тобто. фракції дистиляту спиртуозністю нижче 40% залишаються у другій камері та не потрапляють у відбір. Головні фракції дистиляту можна відбирати і через перший і через
+                    другий контур.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="inst" id="inst">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="inst-box">
+              <div class="inst-col inst-col-1">
+                <h2 class="section-title">
+                  Відео-інструкція <br />
+                  <strong>по збору апарату</strong>
+                </h2>
+                <div class="section-text">
+                  <p>Проста модульна конструкція дає можливість без зайвих зусиль зібрати дистилятор та модернізувати його</p>
+                </div>
+                <button class="custom-btn">ЗАМОВИТИ КОНСУЛЬТАЦІЮ</button>
+              </div>
+              <div class="inst-col inst-col-2" style="background-image: url(img/inst-bg.png)">
+                <a data-fancybox href="https://youtu.be/fEErySYqItI?si=pyd7_cHxf8UgucAy"> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="param" id="param">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="img/param-dec-1.png" alt="" class="param-dec-1 absolute" />
+
+            <h2 class="section-title">
+              Характеристики <br />
+
+              <strong> дистилятора Чумак</strong>
+            </h2>
+
+            <div class="param-box">
+              <div class="param-col param-col-1 param-ani">
+                <img src="img/param-img.jpg" alt="" />
+              </div>
+              <div class="param-col param-col-2 param-ani">
+                <div class="param-text">
+                  <p><strong>Матеріал</strong> - харчова мідь м1 / нержавіюча сталь AISI 304/430</p>
+                  <p><strong>Об'єм перегінних кубів </strong>- Зовнішній 25 / 37 / 50 / 70 літрів, Внутрішній 6 літрів (вказані максимальні/робочі значення)</p>
+                  <p><strong>Швидкість відбору</strong> - максимальна 2,5 літри на годину/рекомендована 1,5 літри на годину</p>
+                  <p><strong>Міцність продукту </strong>- до 92 градусів</p>
+                </div>
+                <button class="custom-btn">Обрати об’єм дистилятора</button>
+              </div>
+
+              <img src="img/param-dec-2.png" alt="" class="param-dec-2 absolute" />
+            </div>
+
+            <div class="banner">
+              <div class="banner-text">
+                <h3>Чумак правильний вибір як для новачків, так і для профі!</h3>
+                <p>
+                  Досконале поєднання функціоналу та якості, що дозволяє отримувати продукт на рівні професіоналів. Більше чистоти, більше якості, більше насолоди від справжнього домашнього напою!
+                </p>
+              </div>
+              <div class="banner-img">
+                <img src="img/param-banner.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cont" id="cont">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="section-title">
+              Комплектація <br />
+              <strong>апарату</strong>
+            </h2>
+
+            <div class="cont-box">
+              <div class="cont-card">Перегінний куб 25 л</div>
+              <div class="cont-card">Вихід під тен кламповий 2 дюйми + заглушка + хомут кламповий</div>
+              <div class="cont-card">Зливний кран нержавіюча сталь 1/2 дюйма</div>
+              <div class="cont-card">Прокладка кришки куба силікон харчовий термостійкий</div>
+              <div class="cont-card">Хомут кріплення модуля дистиляції ЧУМАК</div>
+              <div class="cont-card">Модуль дистиляції ЧУМАК</div>
+              <div class="cont-card">Хомут кламп 1,5 дюйми 2 шт</div>
+              <div class="cont-card">Термометр контролю тем-ри зовнішнього контуру</div>
+              <div class="cont-card">Термометр контролю тем-ри внутрішнього контуру</div>
+              <div class="cont-card">Клапан аварійного скидання тиску</div>
+              <div class="cont-card">Шланг  підключення охолодження  4м</div>
+              <div class="cont-card">Кран голковий</div>
+              <div class="cont-card">Перехідник на змішувач</div>
+            </div>
+
+            <div class="bandel" id="bandel">
+              <div class="bandel-inner">
+                <h3>
+                  Безкоштовна <br />
+                  доставка
+                </h3>
+                <p>
+                  <span style="color: #a5bdf4"
+                    >Відправка без передоплат <br />
+                    накладеним платежем при отриманні</span
+                  >
+                </p>
+                <p>САМОВИВІЗ | НОВА ПОШТА | УКРПОШТА</p>
+
+                <button class="custom-btn">замовити дистилятор</button>
+              </div>
+              <img src="img/bandel-img.png" alt="" class="bandel-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="warr" id="warr">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="warr-inner">
+              <img src="img/warr-img.png" alt="" class="warr-img-1 absolute" />
+              <img src="img/warr-img.png" alt="" class="warr-img-2 absolute" />
+              <div class="warr-title warr-ani">5 РОКІВ ГАРАНТІЇ</div>
+              <div class="warr-text warr-ani">У разі виявлення виробничих дефектів упродовж гарантійного терміну товар підлягає заміні завдяки продавцю</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cons" id="cons2">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="section-title">
+              Підберіть ідеальну <br />
+              <strong>конструкцію дистилятора</strong>
+            </h2>
+
+            <div class="quiz" id="quiz2">
+              <div class="quiz-img-wrap quiz-img-wrap-2">
+                <div class="quiz-stamp">
+                  5 років <br />
+                  гарантії
+                </div>
+                <img src="img/stal-gas.png" alt="" class="quiz-img" id="quiz-img2" />
+              </div>
+              <div class="quiz-content">
+                <!-- Tabs -->
+                <div class="tab2 active">
+                  <div class="label-box-holder">
+                    <div class="label-box-item">
+                      <div class="label-title">Об’єм перегінного куба:</div>
+                      <div class="label-box">
+                        <label class="quiz-label"><input type="radio" name="capacity2" data-price-second="100" value="25 л" checked />25 л</label>
+                        <label class="quiz-label"><input type="radio" name="capacity2" data-price-second="200" value="37 л" />37 л</label>
+                        <label class="quiz-label"><input type="radio" name="capacity2" data-price-second="300" value="50 л" />50 л</label>
+                        <label class="quiz-label"><input type="radio" name="capacity2" data-price-second="400" value="70 л" />70 л</label>
+                      </div>
+                    </div>
+                    <div class="label-box-item">
+                      <div class="label-title">Контур дистиляції:</div>
+                      <div class="label-box">
+                        <label class="quiz-label"><input type="radio" class="image-type2" data-picture="mid" name="kontur2" data-price-second="110" value="Мідь" /> Мідь</label>
+                        <label class="quiz-label"
+                          ><input type="radio" class="image-type2" data-picture="stal" name="kontur2" data-price-second="210" value="Нержавіючаа сталь" checked />Нержавіючаа сталь</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="label-title">Нагрів:</div>
+                  <div class="label-box">
+                    <label class="quiz-label"><input type="radio" class="image-color2" data-picture="electro" name="nahriv2" data-price-second="125" value="Електро" />Електро</label>
+                    <label class="quiz-label"><input type="radio" class="image-color2" data-picture="gas" name="nahriv2" data-price-second="245" value="Газ / індукція" checked />Газ / індукція</label>
+                  </div>
+                </div>
+
+                <div class="tab2">
+                  <div class="label-title-big">Додаткова комплектація:</div>
+
+                  <div class="label-box-extra">
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra1_" data-price-second="43" value="Сітка РПН мідна" />
+                      <span class="label-img"><img src="img/label1.png" alt="" /></span>
+                      Сітка РПН мідна
+                      <span class="label-price"><strong>43</strong> грн</span></label
+                    >
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra2_" data-price-second="12" value="Пристрій безперервного контролю міцності" />
+                      <span class="label-img"><img src="img/label2.png" alt="" /></span>
+                      Пристрій безперервного контролю міцності <span class="label-price"><strong>12</strong> грн</span></label
+                    >
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra3_" data-price-second="64" value="Набір спиртометрів професійний" />
+                      <span class="label-img"><img src="img/label3.png" alt="" /></span>
+                      Набір спиртометрів професійний<span class="label-price"><strong>64</strong> грн</span></label
+                    >
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra4_" data-price-second="78" value="Фальшдно" />
+                      <span class="label-img"><img src="img/label4.png" alt="" /></span>
+                      Фальшдно<span class="label-price"><strong>78</strong> грн</span></label
+                    >
+                    <label class="quiz-label-extra"
+                      ><input type="checkbox" name="extra5_" data-price-second="45" value="Сталева для ароматизації" />
+                      <span class="label-img"><img src="img/label5.png" alt="" /></span>
+                      Сталева для ароматизації<span class="label-price"><strong>45</strong> грн</span></label
+                    >
+                  </div>
+                </div>
+
+                <div class="tab2">
+                  <div class="label-title-big">Введіть ваші контакти:</div>
+
+                  <div class="quiz-form">
+                    <div class="input-row">
+                      <label class="custom-label">ваше ім’я</label>
+                      <input type="text" class="custom-input" placeholder="Введіть ім’я" />
+                    </div>
+
+                    <div class="input-row">
+                      <label class="custom-label">ваш номер телефону</label>
+                      <input type="text" class="custom-input" placeholder="+38 0" />
+                    </div>
+
+                    <div class="input-row quiz-submit">
+                      <input type="submit" value="замовити" class="custom-btn" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="time-price">
+                  <div class="timer-wrapper">
+                    <div class="timer-title">ЗАМОВЛЯЙТЕ ЗІ ЗНИЖКОЮ</div>
+                    <div class="timer">
+                      <div class="timer-item">
+                        <div class="timer-h timer-num">0</div>
+                        <div class="timer-text">год</div>
+                      </div>
+                      <div class="timer-item">
+                        <div class="timer-m timer-num">0</div>
+                        <div class="timer-text">хв</div>
+                      </div>
+                      <div class="timer-item">
+                        <div class="timer-s timer-num">0</div>
+                        <div class="timer-text">сек</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="price-total price-total-2">
+                    <div class="price-l">Ціна:</div>
+                    <div class="price-r"><span></span> грн</div>
+                  </div>
+                </div>
+
+                <div class="quiz-bottom">
+                  <div class="free-progress">
+                    <div class="bar bar-2">крок <span>1</span> / 3</div>
+                  </div>
+
+                  <!-- Buttons -->
+                  <button id="prev2">Previous</button>
+                  <button id="next2" class="custom-btn-ico-right">далі <img src="img/custom-btn-ico-right.svg" alt="" /></button>
+
+                  <!-- Error text -->
+                  <p id="error2"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer" id="footer">
+      <img src="img/ask-clouds-bottom.png" alt="" class="ask-clouds-top" />
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="img/header-dec-1.png" alt="" class="footer-dec-1 absolute" />
+            <img src="img/header-dec-2.png" alt="" class="footer-dec-2 absolute" />
+
+            <div class="footer-text footer-ani">
+              <h2>Залишились питання?</h2>
+              <p>
+                <strong>Напишіть або зателефонуйте нам </strong><br />
+                із задоволенням все розповімо!
+              </p>
+            </div>
+            <div class="footer-btns footer-ani">
+              <button class="custom-btn-ico"><img src="img/viber.svg" alt="" /> задати питання</button>
+              <a href="tel:+380503580622" class="custom-btn-ico"><img src="img/tel.svg" alt="" /> +38 (050) 358-06-22 </a>
+            </div>
+
+            <div class="footer-bottom">
+              <div class="reg-logo">
+                <a href="#" class="logo">
+                  <img src="img/logo.png" alt="" />
+                </a>
+              </div>
+              <div class="credits">
+                © БУДЬМО | Авторська майстерня домашніх <br />
+                дистиляторів 2001 - 2024. Усі права захищені
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="product-popup" class="custom-pop" style="display: none">
+      <div class="product-popup-inner">
+        <div class="product-popup-col product-popup-col-1">
+          <div class="app-pop-content"></div>
+        </div>
+        <div class="product-popup-col product-popup-col-2">
+          <div class="app-form">
+            <div class="form-title-small">замовлення документу</div>
+
+            <div class="input-row">
+              <label class="custom-label">коли потрібен документ</label>
+              <input type="text" class="custom-input datetime" placeholder="Дата й час" />
+            </div>
+
+            <div class="input-row">
+              <label class="custom-label">ваше ім’я</label>
+              <input type="text" class="custom-input" placeholder="Введіть ім’я" />
+            </div>
+
+            <div class="input-row">
+              <label class="custom-label">ваш номер телефону</label>
+              <input type="text" class="custom-input" placeholder="+38 0" />
+            </div>
+
+            <div class="input-row">
+              <input type="submit" value="замовити" class="custom-btn" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="serv-popup" class="custom-pop" style="display: none">
+      <div class="product-popup-inner">
+        <div class="product-popup-col product-popup-col-1">
+          <div class="serv-pop-content"></div>
+        </div>
+        <div class="product-popup-col product-popup-col-2">
+          <div class="app-form">
+            <div class="form-title-small">замовлення послуги</div>
+
+            <div class="input-row">
+              <label class="custom-label">ваше ім’я</label>
+              <input type="text" class="custom-input" placeholder="Введіть ім’я" />
+            </div>
+
+            <div class="input-row">
+              <label class="custom-label">ваш номер телефону</label>
+              <input type="text" class="custom-input" placeholder="+38 0" />
+            </div>
+
+            <div class="input-row">
+              <label class="custom-label">в чому полягає ваша проблема?</label>
+              <textarea class="custom-textarea" placeholder="Короткий опис вашої проблеми"></textarea>
+            </div>
+
+            <div class="input-row">
+              <input type="submit" value="замовити" class="custom-btn" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="consl-popup" style="display: none">
+      <div class="section-title">
+        Замовити <br />
+        <strong>консультацію</strong>
+      </div>
+
+      <div class="consl-form">
+        <div class="input-row">
+          <label class="custom-label">ваше ім’я</label>
+          <input type="text" class="custom-input" placeholder="Введіть ім’я" />
+        </div>
+
+        <div class="input-row">
+          <label class="custom-label">ваш номер телефону</label>
+          <input type="text" class="custom-input" placeholder="+38 0" />
+        </div>
+
+        <div class="input-row">
+          <input type="submit" value="надіслати" class="custom-btn" />
+        </div>
+      </div>
+    </div>
+
+    <div id="thx-popup" class="custom-pop" style="display: none">
+      <div class="thx-title">
+        <strong>Дякуємо!</strong>
+      </div>
+      <div class="thx-sub">
+        Заявка прийнята в обробку. <br />
+        Ми зв’яжемось з Вами найближчим часом
+      </div>
+    </div>
+
+    <div class="fancybox-custom-overlay"></div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/jquery.beefup.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.lazy.min.js"></script>
+    <script src="datapicker/air-datepicker.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
