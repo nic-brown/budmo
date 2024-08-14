@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" width="385.000000" height="88.000000" viewBox="0 0 385 88" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<radialGradient gradientTransform="translate(195.639 44) rotate(12.8713) scale(262.329 59.4073)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_7_1_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.345000" stop-color="#FF6571"/>
+			<stop offset="1.000000" stop-color="#F14250"/>
+		</radialGradient>
+	</defs>
+	<path id="Rectangle 47" d="M0 25C0 11.19 11.19 0 25 0L345.68 0C353.75 0 361.33 3.89 366.02 10.46L379.6 29.46C385.82 38.15 385.82 49.84 379.6 58.53L366.02 77.53C361.33 84.1 353.75 88 345.68 88L0 88L0 25Z" fill="url(#paint_radial_7_1_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Rectangle 47" d="M0 25C0 11.19 11.19 0 25 0L345.68 0C353.75 0 361.33 3.89 366.02 10.46L379.6 29.46C385.82 38.15 385.82 49.84 379.6 58.53L366.02 77.53C361.33 84.1 353.75 88 345.68 88L0 88L0 25ZM2 86L345.68 86C349.63 86 353.16 85.19 356.28 83.59C359.4 81.98 362.1 79.58 364.4 76.37L377.98 57.37C379.41 55.37 380.48 53.26 381.19 51.03C381.91 48.8 382.27 46.45 382.27 44C382.27 41.54 381.91 39.19 381.19 36.96C380.48 34.73 379.41 32.62 377.98 30.62L364.4 11.62C362.1 8.41 359.4 6.01 356.28 4.4C353.16 2.8 349.63 2 345.68 2L25 2C21.82 2 18.88 2.56 16.17 3.68C13.46 4.8 10.98 6.49 8.73 8.73C6.49 10.98 4.8 13.46 3.68 16.17C2.56 18.88 2 21.82 2 25L2 86Z" fill="#F35E6A" fill-opacity="1.000000" fill-rule="evenodd"/>
+</svg>
